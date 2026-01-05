@@ -19,93 +19,181 @@ body {
     line-height: 1.6;
 }
 
-/* ========== NAVBAR ========== */
+/* ========== NAVBAR STYLES ========== */
 .navbar {
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  /* Reducido el padding para navbar más compacto */
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar.scrolled {
-    background-color: var(--primary);
-    padding: 0.5rem 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary);
+  /* Padding aún más reducido al hacer scroll */
+  padding: 0.3rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navbar.scrolled .navbar-brand {
-    color: white !important;
-    font-weight: 700;
-    font-size: 1.5rem;
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .navbar.scrolled .nav-link {
-    color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .navbar.scrolled .nav-link:hover {
-    color: var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+/* Botones de navbar para scroll */
+.navbar.scrolled .btn-track-navbar {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}
+
+.navbar.scrolled .btn-track-navbar:hover {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+.navbar.scrolled .btn-login-navbar {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.navbar.scrolled .btn-login-navbar:hover {
+  background-color: white;
+  color: var(--primary);
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary);
-    transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
 }
 
 .navbar-brand i {
-    margin-right: 0.5rem;
-    color: var(--secondary);
+  margin-right: 0.5rem;
+  color: var(--secondary);
 }
 
 .nav-link {
-    color: var(--primary) !important;
-    font-weight: 500;
-    margin: 0 0.5rem;
-    transition: all 0.3s ease;
-    position: relative;
+  color: var(--primary) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-link::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background-color: var(--secondary);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: var(--secondary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Nuevos estilos para botones en navbar */
+.btn-track-navbar {
+  background-color: var(--secondary);
+  color: white;
+  border: 2px solid var(--secondary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-track-navbar:hover {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+.btn-track-navbar i {
+  margin-right: 0.4rem;
+}
+
+.btn-login-navbar {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-login-navbar:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+}
+
+.btn-login-navbar i {
+  margin-right: 0.4rem;
+}
+
+/* Responsive para botones de navbar */
+@media (max-width: 991px) {
+  .btn-track-navbar,
+  .btn-login-navbar {
     width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .nav-item.ms-3,
+  .nav-item.ms-2 {
+    margin-left: 0 !important;
+  }
 }
 
 .btn-cliente {
-    background-color: var(--secondary);
-    color: white;
-    border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn-cliente:hover {
-    background-color: #c20410;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
-    color: white;
+  background-color: #c20410;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
+  color: white;
 }
 
 .logo-img {
-    height: 100px;
-    width: auto;
+  height: 100px;
+  width: auto;
 }
 
 /* ========== HERO SECTION ========== */

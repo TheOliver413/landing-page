@@ -38,7 +38,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#inicio">Inicio</a>
                     </li>
@@ -54,7 +54,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
-
+                    <li class="nav-item ms-3">
+                        <button class="btn-track-navbar"
+                            onclick="document.querySelector('.tracking-bar input').focus()">
+                            <i class="fas fa-search-location"></i> Rastrear Guía
+                        </button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn-login-navbar" onclick="alert('Módulo de inicio de sesión en desarrollo')">
+                            <i class="fas fa-user-circle"></i> Ingresar
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,8 +73,8 @@
     <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1>Logística Integral a su Servicio</h1>
-            <p>Soluciones de transporte rápidas, seguras y confiables en toda la región del Sur</p>
+            <h1>Servicios de logística integral de mensajería a su servicio</h1>
+            <p>Soluciones de transporte rápidas, seguras y confiables en todo el país</p>
             <div class="hero-buttons">
                 <button class="btn-primary-custom" onclick="alert('Módulo de cotización en desarrollo')">
                     <i class="fas fa-quote-left"></i> Cotizar Envío
@@ -98,32 +108,34 @@
 
             <div class="about-content" data-aos="fade-up" data-aos-delay="100">
                 <p class="about-main-text">
-                    Somos una empresa especializada en soluciones logísticas integrales en Costa Rica, diseñada para
-                    empresas y emprendedores que necesitan rapidez, trazabilidad y respaldo profesional en cada envío.
+                    Somos una empresa especializada en soluciones integrales de mensajería y paquetería,
+                    con cobertura nacional e internacional, diseñada para empresas y emprendedores que
+                    requieren rapidez, trazabilidad y respaldo profesional en cada envío.
                 </p>
                 <p class="about-secondary-text">
-                    Nos encargamos de todo el proceso logístico, desde el origen hasta la entrega final, para que tú te
-                    enfoques en hacer crecer tu negocio.
+                    Nos encargamos de todo el proceso logístico, desde el origen hasta la entrega final,
+                    para que tú te enfoques en hacer crecer tu negocio.
                 </p>
 
                 <div class="about-features">
                     <div class="about-feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Operación confiable</span>
+                        <span>Servicio de mensajería y paquetería</span>
                     </div>
                     <div class="about-feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Procesos claros</span>
+                        <span>Logística de recaudo</span>
                     </div>
                     <div class="about-feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Atención personalizada</span>
+                        <span>Almacenamiento</span>
                     </div>
                     <div class="about-feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Cumplimiento y puntualidad</span>
+                        <span>Alistamiento (picking y packing)</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -155,7 +167,7 @@
             </div>
             <div class="service-detail-grid">
                 <div class="service-detail-content" data-aos="fade-right">
-                    <h2>Transporte Terrestre en Costa Rica</h2>
+                    <h2>Transporte en Costa Rica</h2>
                     <p class="service-main-text">
                         Movemos tu carga a nivel nacional con seguridad, puntualidad y seguimiento constante.
                     </p>
@@ -172,10 +184,6 @@
                         <div class="benefit-item">
                             <i class="fas fa-route"></i>
                             <span>Coordinación eficiente de rutas</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-calendar-check"></i>
-                            <span>Entregas programadas y urgentes</span>
                         </div>
                         <div class="benefit-item">
                             <i class="fas fa-chart-line"></i>
@@ -220,11 +228,11 @@
                         Nuestro servicio de carga aérea es ideal para:
                     </p>
 
-                    <ul class="service-ideal-list">
+                    <!-- <ul class="service-ideal-list">
                         <li><i class="fas fa-plane-departure"></i> Mercadería urgente</li>
                         <li><i class="fas fa-gem"></i> Productos de alto valor</li>
                         <li><i class="fas fa-boxes"></i> Reposición rápida de inventarios</li>
-                    </ul>
+                    </ul> -->
 
                     <div class="service-benefits">
                         <div class="benefit-item">
