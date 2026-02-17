@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="img/logo-gofast.ico">
     <title>Gofast Logistics - Logística Integral a su Servicio</title>
 
     <!-- Bootstrap 5 CDN -->
@@ -32,7 +33,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="img/logofinal.jpg" alt="Logo de gofast" class="logo-img">
+                <img src="img/logo-gofast.jpg" alt="Logo de gofast" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -64,7 +65,7 @@
                         <button class="btn-login-navbar" onclick="alert('Módulo de inicio de sesión en desarrollo')">
                             <i class="fas fa-user-circle"></i> Ingresar
                         </button>
-                    </li>
+                    </li> 
                 </ul>
             </div>
         </div>
@@ -911,7 +912,7 @@
         });
 
         // CONFIGURACIÓN DE LA API
-        const API_BASE_URL = 'http://localhost/costa-rica/api'; // Actualizar con tu dominio
+        const API_BASE_URL = 'https://sdw.com.co/Gofastcr/api'; // Actualizar con tu dominio
         const API_KEY = 'demo_key_12345'; // Actualizar con tu API Key
 
         // ========== FUNCIONES PARA CARGAR PROVINCIAS, CANTONES Y DISTRITOS ==========
@@ -1285,6 +1286,7 @@
                                 <p class="mb-2"><strong>Contacto:</strong> ${data.remitente.contacto || 'N/A'}</p>
                                 <p class="mb-2"><strong>Correo:</strong> ${data.remitente.correo || 'N/A'}</p>
                                 <p class="mb-2"><strong>Ciudad:</strong> ${data.remitente.ciudad || 'N/A'}</p>
+                                <p class="mb-2"><strong>Código de origen:</strong> ${data.remitente.codigo_o || 'N/A'}</p>
                                 <p class="mb-2"><strong>Método de Pago:</strong> <span class="badge bg-success">${data.remitente.metodo_pago || 'N/A'}</span></p>
                             </div>
                         </div>
@@ -1305,11 +1307,13 @@
                                 <p class="mb-2"><strong>NIT:</strong> ${data.destinatario.nit || 'N/A'}</p>
                                 <p class="mb-2"><strong>Dirección:</strong> ${data.destinatario.direccion || 'N/A'}</p>
                                 <p class="mb-2"><strong>Teléfono:</strong> ${data.destinatario.telefono || 'N/A'}</p>
+                                <p class="mb-2"><strong>Teléfono 2:</strong> ${data.destinatario.telefono2 || 'N/A'}</p>
                             </div>
                             <div class="col-md-6">
                                 <p class="mb-2"><strong>Correo:</strong> ${data.destinatario.correo || 'N/A'}</p>
                                 <p class="mb-2"><strong>Código Postal:</strong> ${data.destinatario.codigo_postal || 'N/A'}</p>
                                 <p class="mb-2"><strong>Ciudad:</strong> ${data.destinatario.ciudad || 'N/A'}</p>
+                                <p class="mb-2"><strong>Código de destino:</strong> ${data.destinatario.codigo_d || 'N/A'}</p>
                                 <p class="mb-2"><strong>Servicio:</strong> <span class="badge bg-info">${data.destinatario.servicio || 'N/A'}</span></p>
                                 <p class="mb-2"><strong>Método de Envío:</strong> ${data.destinatario.metodo_envio || 'N/A'}</p>
                                 <p class="mb-2"><strong>Tipo de Trayecto:</strong> <span class="badge bg-warning text-dark">${data.destinatario.tipo_trayecto || 'N/A'}</span></p>
@@ -1319,7 +1323,7 @@
                 </div>
             `;
 
-            // Sección de Información
+            // Sección de Información <p class="mb-2"><strong>Usuario:</strong> ${data.informacion.usuario || 'N/A'}</p>
             let informacionHtml = `
                 <div class="card mb-3">
                     <div class="card-header bg-info text-white">
@@ -1336,7 +1340,6 @@
                             <div class="col-md-6">
                                 <p class="mb-2"><strong>Estado:</strong> <span class="badge bg-primary">${data.informacion.estado || 'N/A'}</span></p>
                                 <p class="mb-2"><strong>Fecha Creación:</strong> ${data.informacion.fecha_creacion || 'N/A'}</p>
-                                <p class="mb-2"><strong>Usuario:</strong> ${data.informacion.usuario || 'N/A'}</p>
                                 <p class="mb-2"><strong>Conductor:</strong> ${data.informacion.conductor || 'N/A'}</p>
                                 <p class="mb-2"><strong>Observaciones:</strong> ${data.informacion.observaciones || 'N/A'}</p>
                             </div>
@@ -1402,7 +1405,7 @@
                                             <td>${pieza.alto}</td>
                                             <td>${pieza.ancho}</td>
                                             <td>${pieza.largo}</td>
-                                            <td>${pieza.peso_volumetrico}</td>
+                                            <td>${pieza.volumetrico}</td>
                                         </tr>
                                     `).join('')}
                                 </tbody>
